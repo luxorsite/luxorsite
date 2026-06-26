@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxor</title>
+    <link rel="icon" type="image/png" href="luxor.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("luxor_accepted") === "true") {
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }
+            
+            const checkbox = document.getElementById("agree-check");
+            const btn = document.getElementById("continue-btn");
+            
+            checkbox.addEventListener("change", function() {
+                btn.disabled = !this.checked;
+            });
+            
+            btn.addEventListener("click", function() {
+                if (checkbox.checked) {
+                    localStorage.setItem("luxor_accepted", "true");
+                    document.getElementById("overlay").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="overlay" class="gate-overlay">
+        <div class="gate-box">
+            <img src="luxor.png" alt="Luxor Logo" class="gate-logo">
+            <h2>Welcome to Luxor</h2>
+            <p>Before accessing our ecosystem, you must read and accept our legal documentation.</p>
+            <div class="gate-links">
+                <a href="tos.html" target="_blank">Terms of Service</a>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+            </div>
+            <div class="gate-checkbox-area">
+                <input type="checkbox" id="agree-check">
+                <label for="agree-check">I agree that I have read the Terms of Service and Privacy Policy</label>
+            </div>
+            <button id="continue-btn" class="btn" disabled style="width: 100%; cursor: pointer;">Continue</button>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <div class="logo-area">
+                <img src="luxor.png" alt="Luxor Logo" class="site-logo">
+                <span class="brand-name">LUXOR</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="tos.html">TOS</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero-section">
+                <h1>Welcome to Luxor</h1>
+                <p>Discover innovative gaming experiences, custom scripts, and advanced software development projects created with passion.</p>
+                <a href="projects.html" class="btn">Explore Projects</a>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About The Developer</h2>
+                <p>Specialized in game development and software engineering. Experienced in building interactive environments, Roblox Lua scripting, and standalone applications using C++ and Python.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Luxor. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
