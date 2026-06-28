@@ -225,3 +225,19 @@ footer {
     border-top: 1px solid #2a2a2a;
     width: 100%;
 }
+
+.legal-links {
+    margin-top: 10px;
+}
+
+.legal-links a {
+    color: #666666;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.legal-links a:hover {
+    color: #00ff88;
+}
