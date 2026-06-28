@@ -3,75 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy & Cookie Policy | Luxor</title>
-    <link rel="stylesheet" href="dec.css">
+    <title>Privacy Policy - Luxor</title>
+    <link rel="icon" type="image/png" href="luxor.png">
+    <link rel="stylesheet" href="style.css">
     <style>
-        .legal-box {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #111;
-            border: 1px solid #00ff41;
-            font-family: sans-serif;
-            color: #e0e0e0;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #121212;
+            margin: 0;
+            padding: 40px 20px;
         }
-        .official-ref {
-            font-family: 'JetBrains Mono', monospace;
-            color: #00ff41;
-            font-size: 0.85rem;
-            border-left: 2px solid #00ff41;
-            padding-left: 10px;
-            margin: 20px 0;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
-        h1, h2 { font-family: 'JetBrains Mono', monospace; color: #fff; }
-        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; }
+        h1 {
+            color: #ffffff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            border-bottom: 1px solid #2d2d2d;
+            padding-bottom: 5px;
+        }
+        p, li {
+            color: #b0b0b0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .meta {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="nav-brand">
-            <span class="nav-title">LUXOR / LEGAL</span>
-        </a>
-    </nav>
 
-    <div class="legal-box">
-        <h1>Privacy & Cookie Policy</h1>
-        
-        <div class="official-ref">
-            REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL 
-            regarding the protection of natural persons with regard to the processing 
-            of personal data (General Data Protection Regulation).
+<header>
+        <div class="logo-area">
+            <img src="luxor.png" alt="Luxor Logo" class="site-logo">
+            <span class="brand-name">LUXOR</span>
         </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="tos.html">TOS</a>
+        </nav>
+</header>
 
-        <h2>1. Data Collection (Article 13 GDPR)</h2>
-        <p>In accordance with Article 13 of the GDPR, we inform you that Luxor collects minimal data to ensure service security:</p>
-        <ul>
-            <li><strong>Technical Logs:</strong> IP addresses and browser types are processed for security purposes (Legitimate Interest).</li>
-            <li><strong>User Accounts:</strong> If you register, we store your username and an encrypted hash of your password.</li>
-        </ul>
-
-        <h2>2. Cookie Policy (ePrivacy Directive)</h2>
-        <p>Our website follows the "Cookie Law" (Directive 2002/58/EC). We use <strong>Technical Cookies</strong> only:</p>
-        <ul>
-            <li><strong>Strictly Necessary Cookies:</strong> These are essential for the website to function (e.g., keeping you logged in).</li>
-            <li><strong>Preference Cookies:</strong> Used to remember your choice regarding this privacy banner.</li>
-        </ul>
-        <p><em>Note: We do not use tracking, advertising, or third-party profiling cookies.</em></p>
-
-        <h2>3. Your Rights</h2>
-        <p>Under the GDPR, you have the following rights:</p>
-        <ul>
-            <li><strong>Right of Access:</strong> You can ask for a copy of your data.</li>
-            <li><strong>Right to Erasure:</strong> You can request the deletion of your account at any time.</li>
-            <li><strong>Right to Object:</strong> You can object to the processing of your technical logs.</li>
-        </ul>
-
-        <h2>4. Data Controller</h2>
-        <p>The "Data Controller" for this website is the <strong>Luxor Development Team</strong>. For any legal inquiries or data deletion requests, please contact us through the official repository.</p>
-
-        <br>
-        <a href="index.html" style="color: #00ff41; text-decoration: none;">[ ← Back to Home ]</a>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+        Last updated: June 28, 2026
     </div>
+
+    <h2>1. Compliance with GDPR</h2>
+    <p>This policy is built in absolute compliance with the European General Data Protection Regulation (GDPR). We are deeply committed to respecting user privacy and ensuring that any potential interactions with our web systems and software remain entirely secure and transparent.</p>
+
+    <h2>2. Minimization of Data Collection (Website)</h2>
+    <p>Luxor explicitly adheres to the principle of data minimization. This website operates strictly as an informational portal. We do not deploy tracking algorithms, user account databases, or analytical systems designed to collect your personally identifiable information (PII).</p>
+
+    <h2>3. Software Applications and Local Storage (Voxaller)</h2>
+    <p>Our downloadable software applications operate strictly on a local, privacy-first basis:</p>
+    <ul>
+        <li>Any configurations, user preferences, or memory assets (such as <code>data.json</code> and <code>memory.json</code>) are stored exclusively on your local device.</li>
+        <li>No local data, user settings, or application interactions are ever uploaded, transmitted, or shared with Luxor or any third-party servers.</li>
+    </ul>
+
+    <h2>4. Technical Logs and Hosting</h2>
+    <p>Standard network transmission data (such as temporary IP addresses, browser types, and access timestamps) may be automatically processed by local hosting servers or standard web tools to maintain connection stability and monitor download traffic. This basic technical data is never cross-referenced, stored long-term, or transferred to third-party commercial entities.</p>
+
+    <h2>5. User Rights under EU Law</h2>
+    <p>Under the European Union legal framework, you retain the complete right to request the checking, modification, or total erasure of any potential data trace. Since no user data databases exist within our architecture, your standard privacy rights are completely secured by default.</p>
+
+    <h2>6. Contact Information</h2>
+    <p>If you have any questions regarding this Privacy Policy, you can contact the administration at: <a href="mailto:luxorcompanyofficial@gmail.com">luxorcompanyofficial@gmail.com</a></p>
+</div>
+
+    <footer>
+        <p>&copy; 2026 Luxor. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="tos.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
 </body>
 </html>

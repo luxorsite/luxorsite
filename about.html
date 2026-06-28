@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Luxor</title>
+    <link rel="icon" type="image/png" href="luxor.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem("luxor_accepted") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="luxor.png" alt="Luxor Logo" class="site-logo">
+            <span class="brand-name">LUXOR</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>About Luxor</h2>
+            <p>Luxor is an independent development ecosystem focused on creating high-quality software, interactive programming solutions, and advanced game scripts. By combining clean execution and creative design, Luxor delivers optimization and functionality across various computing environments.</p>
+            <p>Driven by software engineering principles, the project continually expands into standalone tools, custom utilities, and immersive digital landscapes built for modern platforms.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Luxor. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="tos.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>

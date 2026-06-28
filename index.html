@@ -1,42 +1,100 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxor | Official Site</title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="dec.css">
+    <title>Luxor</title>
+    <link rel="icon" type="image/png" href="luxor.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("luxor_accepted") === "true") {
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }
+            
+            const checkbox = document.getElementById("agree-check");
+            const btn = document.getElementById("continue-btn");
+            
+            checkbox.addEventListener("change", function() {
+                btn.disabled = !this.checked;
+            });
+            
+            btn.addEventListener("click", function() {
+                if (checkbox.checked) {
+                    localStorage.setItem("luxor_accepted", "true");
+                    document.getElementById("overlay").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            });
+        });
+    </script>
 </head>
-
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="nav-brand">
-            <img src="icon.png" alt="Logo" class="nav-logo">
-            <span class="nav-title">LUXOR</span>
-        </a>
-        <div class="nav-links">
-            <a href="downloads.html" class="nav-item">Downloads</a>
-            <a href="login.html" class="nav-item">Login / Register</a>
+
+    <div id="overlay" class="gate-overlay">
+        <div class="gate-box">
+            <img src="luxor.png" alt="Luxor Logo" class="gate-logo">
+            <h2>Welcome to Luxor</h2>
+            <p>Before accessing our site, you must read and accept our legal documentation.</p>
+            <div class="gate-links">
+                <a href="tos.html" target="_blank">Terms of Service</a>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+            </div>
+            <div class="gate-checkbox-area">
+                <input type="checkbox" id="agree-check">
+                <label for="agree-check">I agree that I have read the Terms of Service and Privacy Policy</label>
+            </div>
+            <button id="continue-btn" class="btn" disabled style="width: 100%; cursor: pointer;">Continue</button>
         </div>
-    </nav>
+    </div>
 
-    <main class="container">
-        <section class="hero-section">
-            <h1>Welcome to the official Luxor repository.</h1>
-            <p class="hero-description">
-                Access the complete version history and find the perfect build for your development needs.
-            </p>
-        </section>
-    </main>
+    <div id="main-content" style="display: none;">
+        <header>
+            <div class="logo-area">
+                <img src="luxor.png" alt="Luxor Logo" class="site-logo">
+                <span class="brand-name">LUXOR</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="tos.html">TOS</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </header>
 
-    <footer class="cookie-banner">
-        <div class="cookie-content">
-            <p>
-    This site uses <a href="privacy.html" class="legal-link">European Privacy Policy and Cookies</a>. 
-    By using Luxor, you agree to our <a href="tos.html" class="legal-link">Terms of Use</a>.
-</p>
-            <button class="cookie-btn">Accept</button>
+        <main>
+            <section id="home" class="hero-section">
+                <h1>Welcome to Luxor</h1>
+                <p>Discover Luxor projects under here!</p>
+                <a href="projects.html" class="btn">Explore Projects</a>
+            </section>
+
+            <section id="home" class="hero-section">
+                <h1>About</h1>
+                <a href="about.html" class="btn">About Luxor</a>
+            </section>
+
+            <section id="home" class="hero-section">
+            <h1>TOS</h1>
+            <a href="tos.html" class="btn">Terms of Service</a>
+            </section>
+
+            <section id="home" class="hero-section">
+            <h1>Privacy Policy</h1>
+            <a href="privacy.html" class="btn">Privacy Policy</a>
+            </section>
+        </main>
+
+    <footer>
+        <p>&copy; 2026 Luxor. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="tos.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
         </div>
     </footer>
+    </div>
+
 </body>
 </html>
